@@ -5,6 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import IconButton from '@mui/material/IconButton';
+import IconPhone from '@mui/icons-material/esm/LocalPhone';
 import InputAdornment from '@mui/material/InputAdornment';
 import IListBookItem from '../msc/IListBookItem';
 import List from '@mui/material/List';
@@ -16,6 +17,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
+import { grey } from '@mui/material/colors';
 import { ICrudPropRequest, ICrudStateArray } from '../msc/ICrud'
 import { IPhoneBookReadFilterData } from '../msc/FilterData';
 
@@ -246,6 +248,7 @@ export class ListBook extends Component<IListBookProps, IListBookState> {
                     </Tooltip>
                 </Fragment>
             }>
+                <IconPhone className="listbook-list-phoneicon" fontSize="small" sx={{ color: grey[500] }} />
                 <ListItemText primary={a.name} secondary={a.msisdn} />
             </ListItem>);
 

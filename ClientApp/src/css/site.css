@@ -44,6 +44,10 @@ h1 {
 .listbook-list-item:last-of-type {
   border-bottom: 2px solid #e5e7ea; }
 
+.listbook-list-phoneicon {
+    padding: 2px;
+    margin: 20px 10px 0 0; }
+
 .listbookform-root {
   display: flex;
   flex-direction: column;

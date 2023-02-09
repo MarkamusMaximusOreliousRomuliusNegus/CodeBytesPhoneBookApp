@@ -1,0 +1,90 @@
+﻿$back-color1: #F6F6F6;
+$back-color2: #FFFFFF;
+$fore-color1: rgb(34, 37, 41);
+$border1: rgb(229, 231, 234);
+
+.root {
+    margin: auto;
+    max-width: 500px;
+    background-color: $back-color1;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.headerIcon {
+    vertical-align: middle;
+    margin: 0 15px;
+    text-align: text-bottom;
+}
+
+.listbook-root {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.listbook-titlebar {
+    display: flex;
+}
+
+.listbook-title {
+    flex-grow: 1;
+}
+
+.listbook-searchfilter {
+    background: white;
+    border: 2px solid $border1;
+    border-radius: 4px;
+
+    .MuiOutlinedInput-root {
+        padding-right: 0;
+        border: 1px solid $border1;
+    }
+}
+
+.listbook-list {
+    flex-grow: 1;
+}
+
+.listbook-list-item {
+    color: $fore-color1;
+    border: 2px solid $border1;
+    border-bottom: none;
+    background: $back-color2;
+}
+
+.listbook-list-item:last-of-type {
+    border-bottom: 2px solid $border1;
+}
+
+.listbookform-root {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.listbookform-title {
+    text-align: center;
+    padding: 0px;
+}
+
+.listbookform-root-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listbookform-submit {
+    max-width: 100px;
+}
+
+.listbookform-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}

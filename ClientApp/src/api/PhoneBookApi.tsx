@@ -9,7 +9,12 @@ export interface IPhoneBookApi {
     update: (item: IListBookItem) => Promise<IListBookItem>
 };
 
+/** An API for sending data to the phone book controller. */
 export class PhoneBookApi implements IPhoneBookApi {
+    /**
+     * Creates a phone book item on the remotes server.
+     * @item: The item to create.
+     */
     public async create(item: IListBookItem): Promise<IListBookItem> {
         const headers: Headers = new Headers();
         headers.set('Content-Type', 'application/json');
@@ -31,6 +36,10 @@ export class PhoneBookApi implements IPhoneBookApi {
         }
     }
 
+    /**
+     * Deletes a phone book item on the remotes server.
+     * @item: The item to delete.
+     */
     public async delete(item: IListBookItem): Promise<IListBookItem> {
         const headers: Headers = new Headers();
         headers.set('Content-Type', 'application/json');
@@ -52,6 +61,10 @@ export class PhoneBookApi implements IPhoneBookApi {
         }
     }
 
+    /**
+     * Returns a collection of phone book items from the remotes server.
+     * @filterData: The filter data to filter the read results with.
+     */
     public async read(filterData: IPhoneBookReadFilterData): Promise<IListBookItem[]> {
         const headers: Headers = new Headers();
         headers.set('Content-Type', 'application/json');
@@ -76,6 +89,10 @@ export class PhoneBookApi implements IPhoneBookApi {
         }
     }
 
+    /**
+     * Updates a phone book item on the remotes server.
+     * @item: The item to update.
+     */
     public async update(item: IListBookItem): Promise<IListBookItem> {
         const headers: Headers = new Headers();
         headers.set('Content-Type', 'application/json');

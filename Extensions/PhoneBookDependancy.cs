@@ -1,7 +1,7 @@
-﻿using TechTest.PhoneBook.Repositories;
-
-namespace TechTest.PhoneBook.Extensions
+﻿namespace TechTest.PhoneBook.Extensions
 {
+    using TechTest.PhoneBook.Repositories;
+
     /// <summary>
     /// Extension methods for dependancy injection.
     /// </summary>

@@ -12,6 +12,7 @@ export interface IListBookProps {
     phoneBookApi: IPhoneBookApi
 }
 
+/** Class to hold the application page.*/
 export default class App extends Component<IListBookProps> {
     render() {
         return (

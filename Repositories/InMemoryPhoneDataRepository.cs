@@ -1,7 +1,7 @@
-﻿using TechTest.PhoneBook.Models;
-
-namespace TechTest.PhoneBook.Repositories
+﻿namespace TechTest.PhoneBook.Repositories
 {
+    using TechTest.PhoneBook.Models;
+
     /// <summary>
     /// Place holder repository to represent a database. This is here due to time constrains.
     /// </summary>

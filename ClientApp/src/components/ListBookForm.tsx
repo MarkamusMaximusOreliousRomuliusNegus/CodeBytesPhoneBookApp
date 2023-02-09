@@ -8,7 +8,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { IListBookItem } from '../msc/IListBookItem';
 
-
+/** The props definition for a list book component. */
 export interface IListBookFormProps {
     formType: 'update' | 'create';
     isOpen: boolean;
@@ -19,14 +19,15 @@ export interface IListBookFormProps {
     onSubmit?: (value: IListBookItem, formType: 'update' | 'create') => void;
 }
 
+/** The state definition for a list book component. */
 export interface IListBookFormState {
     data: IListBookItem;
     nameErrorMessage?: string;
-    msisdnErrorMessage?: string;  
+    msisdnErrorMessage?: string;
 }
 
+/** A component that contains a list for applying phone book items. */
 export class ListBookForm extends Component<IListBookFormProps, IListBookFormState> {
-
     /** Initialises a new instance of the ListBookForm class. */
     constructor(props: IListBookFormProps) {
         super(props);
@@ -45,16 +46,13 @@ export class ListBookForm extends Component<IListBookFormProps, IListBookFormSta
 
     /** When component updates. */
     public componentDidUpdate(prevProps: IListBookFormProps) {
-
         if (prevProps.data !== this.props.data) {
-
             this.setState({ data: this.props.data });
         }
     }
 
     /** Renders the component. */
     public render(): ReactElement {
-
         const isNameError: boolean = this.state.nameErrorMessage != null;
         const isMsisdnError: boolean = this.state.msisdnErrorMessage != null;
 
@@ -68,7 +66,7 @@ export class ListBookForm extends Component<IListBookFormProps, IListBookFormSta
                     </Typography>
 
                     <Box className="listbookform-root-form" onKeyPress={this.handleFormKeyPress}>
-                        <TextField autoFocus 
+                        <TextField autoFocus
                             label="Name"
                             name="name"
                             size="small"
@@ -106,7 +104,7 @@ export class ListBookForm extends Component<IListBookFormProps, IListBookFormSta
     }
 
     /** Event handler for handling input change. */
-    private handleChange(event:any) {
+    private handleChange(event: any) {
         const name = event.target.name;
         const value = event.target.value;
         const data = { ...this.state.data, [name]: value }
@@ -128,14 +126,14 @@ export class ListBookForm extends Component<IListBookFormProps, IListBookFormSta
         }
     };
 
-    /** 
+    /**
      * Validates the form updating input errors.
      * Returns a value indicating whether the form input is valid.
      */
     private ValidateForm(): boolean {
         const [isMsisdnValid, msisdnErrorMessage] = this.isValidMsisdnField();
         const [isNameValid, nameErrorMessage] = this.isValidNameField();
-        
+
         this.setState({ msisdnErrorMessage: msisdnErrorMessage, nameErrorMessage: nameErrorMessage });
 
         return isMsisdnValid && isNameValid;

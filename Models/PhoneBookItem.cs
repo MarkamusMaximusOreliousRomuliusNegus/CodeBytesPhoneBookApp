@@ -1,7 +1,7 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace TechTest.PhoneBook.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     /// <summary>
     /// Model for a phone book item
     /// </summary>
